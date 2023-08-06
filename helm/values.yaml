@@ -1,0 +1,27 @@
+appName: Vector_locust
+namespace: default
+configmap:
+    name: helmappconfigmapv1.1
+
+global:
+  name: locust-global
+  locust_file: query_*_*.py
+  locust_file_path: "/mnt/locust/tests"
+  locust_host:
+  env: {
+      DATE_LIABLE: 'date',
+      REQ_AMOUNT: 25 ,
+      USER: 'my_user' ,
+      PASS: ' token ' ,
+      TOKEN: "" ,
+      VER: "2.0.0",
+      wait_time: 30,
+      PORT: 8089,
+      FEATURE: 'feature',
+      GFID: 'gfid'
+  }
+
+image:
+    name: vector_locust
+    tag: latest
+
