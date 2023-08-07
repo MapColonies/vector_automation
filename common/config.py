@@ -19,6 +19,6 @@ by_date = os.getenv("date_label", "date")  # last_update_date
 feature_name = os.getenv('FEATURES', 'features')
 gfid = os.getenv("GFID", 'id')  # gfid
 by_date_filter = ('&count=', f'&sortBy={by_date}&count=')
-low_time = os.getenv("LOW_VALUE", 100)
-med_time = os.getenv("MED_VALUE", 500)
+low_time = int(os.getenv("LOW_VALUE", 100))
+med_time = int(os.getenv("MED_VALUE", 500))
 custom_path = os.getenv("path_dir_source", "Results")

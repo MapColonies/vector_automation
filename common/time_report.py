@@ -1,6 +1,8 @@
 import datetime
 import json
 from common.config import custom_path, low_time, med_time
+import threading
+
 
 
 class TimeReport:
@@ -11,15 +13,20 @@ class TimeReport:
         self.low = 0
         self.med = 0
         self.high = 0
+        self.lock = threading.Lock()
+
 
     def med_increase(self):
-        self.med += 1
+        with self.lock:
+            self.med += 1
 
     def high_increase(self):
-        self.high += 1
+        with self.lock:
+            self.high += 1
 
     def low_increase(self):
-        self.low += 1
+        with self.lock:
+            self.low += 1
 
     def present(self):
         return f"LOW: {self.low}, MID: {self.med}, High: {self.high}"
@@ -61,6 +68,13 @@ class TimeReport:
             return {"Low": self.low / total, "Med": self.med / total, "High": self.high / total, "Total": total}
         else:
             return {'message':"Can't divide by Zero "}
+
+    def reset_count(self):
+        self.low = 0
+        self.med = 0
+        self.high = 0
+        self.lock = threading.Lock()
+        return self
 
 
 """
