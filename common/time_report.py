@@ -95,7 +95,7 @@ def my_request_handler(request_type, name, response_time, response_length, respo
 
 @events.test_start.add_listener
 def on_test_start(environment, **kwargs):
-    obj_time.__init__(__name__)
+    obj_time.reset_count()
     if not isinstance(environment.runner, MasterRunner):
         print("Beginning test setup ")
     else:
@@ -109,7 +109,6 @@ def on_test_stop(environment, **kwargs):
         obj_time.write_rps_percent_results()
     else:
         print("Stopped test from Master node")
-
 
 
 """
