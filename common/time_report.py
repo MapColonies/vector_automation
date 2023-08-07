@@ -4,7 +4,6 @@ from common.config import custom_path, low_time, med_time
 import threading
 
 
-
 class TimeReport:
 
     def __init__(self, file_name):
@@ -14,7 +13,6 @@ class TimeReport:
         self.med = 0
         self.high = 0
         self.lock = threading.Lock()
-
 
     def med_increase(self):
         with self.lock:
