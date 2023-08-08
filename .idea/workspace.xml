@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74d00d31-d75a-40c9-9cad-634eccddbf96" name="Changes" comment="singltone , safe thread" />
+    <list default="true" id="74d00d31-d75a-40c9-9cad-634eccddbf96" name="Changes" comment="Read ME Update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +119,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691392636676</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Read ME Update">
+      <option name="closed" value="true" />
+      <created>1691393906516</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691393906516</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Read ME Update">
+      <option name="closed" value="true" />
+      <created>1691393984262</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691393984262</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +154,7 @@
     <MESSAGE value="git ignore" />
     <MESSAGE value="WFS update" />
     <MESSAGE value="singltone , safe thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="singltone , safe thread" />
+    <MESSAGE value="Read ME Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read ME Update" />
   </component>
 </project>

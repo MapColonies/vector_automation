@@ -27,6 +27,9 @@ class TimeReport:
             self.low += 1
 
     def present(self):
+        """"
+        The Function return the counter
+        """
         return f"LOW: {self.low}, MID: {self.med}, High: {self.high}"
 
     def write_rps_percent_results(self):
@@ -53,6 +56,10 @@ class TimeReport:
         return filename
 
     def times_count(self, time):
+        """
+        The function receives a response time and increases the counter according to the desired ranges    
+        :return: 
+        """""
         if time <= low_time:
             self.low_increase()
         elif time <= med_time:
@@ -61,13 +68,21 @@ class TimeReport:
             self.high_increase()
 
     def time_calculate(self):
+        """
+        This function sums up the counters and calculates the percentages after the end of the test
+        :return: 
+        """""
         total = self.low + self.high + self.med
         if total is not 0:
             return {"Low": self.low / total, "Med": self.med / total, "High": self.high / total, "Total": total}
         else:
-            return {'message':"Can't divide by Zero "}
+            return {'message': "Can't divide by Zero "}
 
     def reset_count(self):
+        """
+        This function resets the counters for the next run        
+        :return: 
+        """""
         self.low = 0
         self.med = 0
         self.high = 0
